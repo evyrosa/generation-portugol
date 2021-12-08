@@ -1,0 +1,28 @@
+programa {
+	funcao inicio() {
+	    
+	    // Variáveis
+	    real pontuacao[5]
+	    real maiorPt = 0
+	    
+	    // Pede os dados
+		escreva("Digite cinco notas:\n")
+		
+		// Percorre o vetor acessando pelo índice
+		para (inteiro indice = 0; indice < 5; indice++){
+		    escreva("Nota " + (indice + 1) + ": ")
+		    
+		    // Guarda o valor na posição do índice
+		    leia(pontuacao[indice])
+		    
+		    // Se o valor atual for maior que maiorPt,
+		    // guarda esse valor em maiorPt
+		    se (pontuacao[indice] > maiorPt) {
+		        maiorPt = pontuacao[indice]
+		    }
+		}
+		
+		// Imprime na tela
+		escreva("\nMaior nota: " + maiorPt)
+	}
+}

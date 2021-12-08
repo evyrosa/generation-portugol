@@ -1,0 +1,49 @@
+programa {
+	funcao inicio() {
+	    
+	    // Variáveis
+		inteiro matriz[3][3]
+		inteiro total = 0, diagonal = 0
+		
+		escreva("Digite os valores da matriz:\n")
+		
+		// Percorre a matriz linha a linha
+        para(inteiro linha = 0; linha < 3; linha++){
+            
+            // Percorre coluna a coluna
+		    para(inteiro coluna = 0; coluna < 3; coluna++){
+		        escreva("Linha: " + linha + ", Coluna: " + coluna + " -- ")
+		        
+		        // Armazena o valor
+		        leia(matriz[linha][coluna])
+		        limpa()
+		    }
+		}
+		
+		escreva("Matriz:\n")
+		
+		// Percorre a matriz linha a linha
+	    para(inteiro linha = 0; linha < 3; linha++){
+	        escreva("\n")
+	        
+	        // Percorre coluna a coluna
+		    para(inteiro coluna = 0; coluna < 3; coluna++){
+		        
+		        // Soma cada valor junto em total
+		        total += matriz[linha][coluna]
+		        
+		        // Se a linha for igual a coluna, soma o valor em diagonal
+		        se(linha == coluna){
+		            diagonal += matriz[linha][coluna]
+		        }
+		        
+		        // Imprime a matriz
+		        escreva(matriz[linha][coluna] + " ")
+		    }
+		}
+		
+		//  Imprime os resultados
+		escreva("\nSoma total: " + total)
+        escreva("\nSoma da diagonal: " + diagonal)
+	}
+}

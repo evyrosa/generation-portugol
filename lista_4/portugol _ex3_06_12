@@ -1,0 +1,59 @@
+programa {
+	funcao inicio() {
+	    // Declara as quatro matrizes
+		inteiro N1[4][6], N2[4][6], M1[4][6], M2[4][6]
+		
+		//Recebe dados da matriz N1
+		escreva("Dados da matriz N1:\n")
+		
+		// Percorre a matriz N1 armazenando os numeros
+		para(inteiro linha = 0; linha < 4; linha++){
+		    para(inteiro coluna = 0; coluna < 6; coluna++){
+		        escreva("Linha: " + linha + ", Coluna: " + coluna + " -- ")
+		        leia(N1[linha][coluna])
+		        limpa()
+		    }
+		}
+		
+		//Recebe dados da matriz N2
+		escreva("Dados da matriz N2:\n")
+		
+		// Percorre a matriz N1 armazenando os numeros
+		para(inteiro linha = 0; linha < 4; linha++){
+		    para(inteiro coluna = 0; coluna < 6; coluna++){
+		        escreva("Linha: " + linha + ", Coluna: " + coluna + " -- ")
+		        leia(N2[linha][coluna])
+		        limpa()
+		    }
+		}
+		
+		// Mostra a matriz M1
+		escreva("Matriz M1\n")
+		
+		// Percorre as matrizes N1, N2 e M1,
+		// somando os valores de N1 com N2 e colocando em M1
+	    para(inteiro linha = 0; linha < 4; linha++){
+		    escreva("\n")
+		    para(inteiro coluna = 0; coluna < 6; coluna++){
+		        M1[linha][coluna] = N1[linha][coluna] + N2[linha][coluna]
+		        
+		        // Imprime os valores de M1
+		        escreva(M1[linha][coluna] + " ")
+		    }
+		}
+		
+		escreva("\n\nMatriz M2\n")
+		
+		// Percorre as matrizes N1, N2 e M1,
+		// somando os valores de N1 com N2 e colocando em M1
+	    para(inteiro linha = 0; linha < 4; linha++){
+		    escreva("\n")
+		    para(inteiro coluna = 0; coluna < 6; coluna++){
+		        M2[linha][coluna] = N1[linha][coluna] - N2[linha][coluna]
+		        
+		        // Imprime os valores de M2
+		        escreva(M2[linha][coluna] + " ")
+		    }
+		}
+	}
+}
